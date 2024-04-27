@@ -17,7 +17,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import spider.chart.Chart;
-import com.component.*;
 import spider.component.MyProgressBar;
 
 
@@ -334,7 +333,7 @@ public class MainFrame extends JFrame implements ActionListener{
                 //读取网址库中的网址
                 BufferedReader brr=new BufferedReader(new FileReader(file));
                 //将匹配数据写入文本中
-                PrintStream ps=new PrintStream(new File("data.txt"));
+                PrintStream ps=new PrintStream(new File("./file/data.txt"));
                 ps.println("敏感词记录如下:");
                 int size=wordList.size();
                 mpb.setVisible(true);	//显示进度条
