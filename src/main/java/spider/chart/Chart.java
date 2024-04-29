@@ -5,11 +5,11 @@ import org.jfree.chart.ChartFrame;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.category.DefaultCategoryDataset;
-
-import java.util.HashMap;
 import java.util.Map;
 
+
 public class Chart {
+    // 对应spiderOne
     public static void showSingle(Map<String,Integer> map) {
         // 创建数据
         DefaultCategoryDataset dataset = new DefaultCategoryDataset();
@@ -32,6 +32,8 @@ public class Chart {
         chartFrame.pack();
         chartFrame.setVisible(true);
     }
+
+    // 对应spiderAll
     public static void showAll(Map<String, Map<String,Integer>> map){
         // 创建数据
         DefaultCategoryDataset dataset = new DefaultCategoryDataset();

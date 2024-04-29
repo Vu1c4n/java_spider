@@ -112,12 +112,14 @@ public class MainFrame extends JFrame implements ActionListener{
         jpl1.add(siteWarn,BorderLayout.WEST);
         jpl1.add(siteSPane,BorderLayout.CENTER);
         jpl1.add(jpl5,BorderLayout.EAST);
+        
         //源代码文本,以及处理后的文本框设置
         htmlArea.setEditable(false);
         htmlArea.setLineWrap(true);
         htmlArea.setFont(new Font("宋体", Font.PLAIN, 14));
         jpl2.setLayout(new BorderLayout());
         jpl2.add(htmlSPane,BorderLayout.CENTER);
+
         //设置布局
         jpl8.setLayout(new GridLayout(2, 1, 10,5));
         jpl8.add(siteLib);
@@ -158,6 +160,7 @@ public class MainFrame extends JFrame implements ActionListener{
         match.addActionListener(this);
     }
 
+    // *core
     //使用URL爬取网页的html代码
     public String getHtml(String website) {
 
@@ -184,6 +187,7 @@ public class MainFrame extends JFrame implements ActionListener{
         return text;	//返回html代码文本
     }
 
+    // core*
     //对html进行正则匹配,提取出其中的文本
     public String getText(String str) {
 
@@ -230,6 +234,7 @@ public class MainFrame extends JFrame implements ActionListener{
         }
     }
 
+    // core*
     //高亮显示
     public void showSensword() {
 
@@ -370,7 +375,7 @@ public class MainFrame extends JFrame implements ActionListener{
                 ps.close();		//关闭文件流
 
                 JOptionPane.showMessageDialog(null, "爬取完毕！请打开文件查看!");
-                Chart.showAll(allMap);
+                Chart.showAll(allMap); // 展示可视化图表
 
             }catch (Exception e) {
                 // TODO: handle exception
