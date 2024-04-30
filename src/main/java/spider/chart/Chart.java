@@ -20,9 +20,9 @@ public class Chart {
 
         // 创建JFreeChart对象
         JFreeChart chart = ChartFactory.createBarChart(
-                "Example", // 图标题
-                "Category",
-                "Frequency",
+                "网页敏感词词频统计", // 图标题
+                "网站",
+                "出现频率",
                 dataset,
                 PlotOrientation.VERTICAL,
                 true, true, false);
@@ -48,9 +48,9 @@ public class Chart {
 
         // 创建JFreeChart对象
         JFreeChart chart = ChartFactory.createBarChart(
-                "Example", // 图标题
-                "Category",
-                "Frequency",
+                "网页敏感词词频统计", // 图标题
+                "网站",
+                "出现频率",
                 dataset,
                 PlotOrientation.VERTICAL,
                 true, true, false);
